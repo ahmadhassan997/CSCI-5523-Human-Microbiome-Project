@@ -3,8 +3,6 @@ import context
 from os import path
 
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
     abundance_stool_df = pd.read_csv(path.join(context.proj_dir, 'data', 'abundance_stoolsubset.csv'))
@@ -27,4 +25,3 @@ if __name__ == '__main__':
     summary.sort_values(by='count', inplace=True, ascending=False)
     summary.to_csv(path.join(context.proj_dir, 'data_processed', 'summary', 'stool_object_summary.csv'),
                    index=False)
-
